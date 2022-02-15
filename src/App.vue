@@ -1,32 +1,36 @@
 <template>
   <div id="app">
+    <top-header></top-header>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Главная</router-link> |
+      <router-link to="/about">О сервисе</router-link> |
+      <router-link to="/register">Регистрация</router-link> |
+      <router-link to="/login" >Вход</router-link> |
+      <router-link to="/info">Инфо</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style>
+<script>
+import Header from "./components/Top-Header";
+export default {
+  components: {
+    "top-header": Header
+  }
+};
+</script>  
+
+<style scoped>
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 15pt;
 }
 
 #nav {
   padding: 30px;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
