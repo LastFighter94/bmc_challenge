@@ -13,6 +13,11 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 export default {
+  data() {
+    return {
+      loggedIn: false
+    };
+  },
   name: "top-header",
   mounted() {
     this.setupFirebase();
@@ -39,11 +44,6 @@ export default {
           this.$router.replace({ name: "login" });
         });
     }
-  },
-  data() {
-    return {
-      loggedIn: false
-    };
   }
 };
 </script>

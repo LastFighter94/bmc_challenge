@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <top-header></top-header>
+    <Header/>
     <div id="nav">
       <router-link to="/">Главная</router-link> |
       <router-link to="/about">О сервисе</router-link> |
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import Header from "./components/Top-Header";
+import Header from "./components/Header";
 export default {
   components: {
-    "top-header": Header
+    Header
   }
 };
 </script>  
